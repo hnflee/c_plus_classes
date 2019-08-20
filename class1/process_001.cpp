@@ -22,6 +22,5 @@ int main() {
 
     cout << "a="<<a<<" b="<<b;
 
-
     return 0;
 }
