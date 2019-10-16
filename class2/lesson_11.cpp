@@ -22,18 +22,11 @@ void qsort(int a[],int l,int r){
       a[i]=a[j];
       a[j]=p;
       i++;j--;
-
-
     }
-
-
   }while(i<=j);
   cout<<endl;
   if(l<j)qsort(a,l,j);
   if(i<r)qsort(a,i,r);
-
-  
-
 }
 
 int main(){
