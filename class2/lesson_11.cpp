@@ -10,20 +10,25 @@ void qsort(int a[],int l,int r){
   int i,j,mid,p;
   i=l;j=r;
   mid=a[(l+r)/2];
-  
+  cout<<"l:"<<l<<" r:"<<r<<endl;
   do{
     while(a[i]<mid)i++;
     while(a[j]>mid)j--;
     if(i<=j){
+
+      cout<<"a["<<i<<"]:"<<a[i]<<" ";
+      cout<<"a["<<j<<"]:"<<a[j]<<" ";
       p=a[i];
       a[i]=a[j];
       a[j]=p;
       i++;j--;
+
+
     }
 
 
   }while(i<=j);
-
+  cout<<endl;
   if(l<j)qsort(a,l,j);
   if(i<r)qsort(a,i,r);
 
@@ -40,7 +45,7 @@ int main(){
   }
   cout<<endl;
 
-  qsort(a,0,10);
+  qsort(a,0,9);
 
   for(int i=0;i<n;i++){
     cout<<a[i]<<" ";
